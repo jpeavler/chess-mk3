@@ -1,9 +1,8 @@
 import React from 'react';
 
-function Square() {
+function Square(props) {
   return (
-    <div className="App">
-        
+    <div className="Square" color={props.color}>
     </div>
   );
 }
