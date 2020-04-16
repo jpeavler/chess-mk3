@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
 
-function App() {
+function Game() {
   return (
     <div className="App">
-      <Game/>
+
     </div>
   );
 }
 
-export default App;
+export default Game;

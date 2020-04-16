@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import Square from './Square'
 
-function App() {
+function Board() {
   return (
     <div className="App">
-      <Game/>
+
     </div>
   );
 }
 
-export default App;
+export default Board;
