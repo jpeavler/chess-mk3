@@ -1,18 +1,17 @@
 import React from 'react';
-import Square from './Square';
+import Row from './Row';
 
 class Board extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      squaresArray : Array(64).fill(null)
+      rowsArray : Array(8).fill(null)
     }
   }
   render() {
-    const chessBoard = this.state.squaresArray.map((element, index) => {
-      let row;
-      let color = (index % 2) ? "Brown" : "Tan";
-      return<Square color={color}/>
+    const chessBoard = this.state.rowsArray.map((element, index) => {
+      let rowNumber = index + 1;
+      return<Row rowNumber={rowNumber}/>
     });
     return(
       <div className="Board">
