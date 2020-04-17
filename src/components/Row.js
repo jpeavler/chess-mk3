@@ -21,7 +21,7 @@ class Row extends React.Component {
             }
             return<Square color={color} rownumber={rowNumber} colnumber={colNumber}
                   key={keyName}
-            />
+            ></Square>
         });
         return (
             <div className="Row" rownumber={this.props.rownumber}>

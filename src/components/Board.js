@@ -17,7 +17,6 @@ class Board extends React.Component {
       <div className="Board">
           {chessBoard}
       </div>
-      
     )
   };
 }
