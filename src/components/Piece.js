@@ -1,7 +1,14 @@
 import React from 'react'
 
-function Piece(props) {
-    function renderPiece(type, color){
+class Piece extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            rowLocation: "",
+            colLocation: ""
+        }
+    }
+    renderPiece(type, color){
         let pieceLetter;
         switch(type) {
             case "pawn":
@@ -27,8 +34,10 @@ function Piece(props) {
         }
         return<div className="Piece" color={color} type={type}>{pieceLetter}</div>;
     }
-    return (
-        renderPiece(props.type, props.color)
-    )
+    render(){
+        return (
+            renderPiece(props.type, props.color)
+        )
+    }
 }
 export default Piece;

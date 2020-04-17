@@ -19,9 +19,12 @@ class Row extends React.Component {
             }else{
                 color = (index % 2) ? "Tan" : "Brown";
             }
-            return<Square color={color} rownumber={rowNumber} colnumber={colNumber}
-                  key={keyName}
-            ></Square>
+            return(
+                <>
+                    <Square color={color} rownumber={rowNumber} colnumber={colNumber}
+                        key={keyName}/>
+                </>
+            )
         });
         return (
             <div className="Row" rownumber={this.props.rownumber}>
