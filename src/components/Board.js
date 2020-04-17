@@ -11,7 +11,7 @@ class Board extends React.Component {
   render() {
     const chessBoard = this.state.rowsArray.map((element, index) => {
       let rowNumber = index + 1;
-      return<Row rowNumber={rowNumber}/>
+      return<Row rownumber={rowNumber} key={rowNumber}/>
     });
     return(
       <div className="Board">
@@ -19,7 +19,7 @@ class Board extends React.Component {
       </div>
       
     )
-    };
+  };
 }
 
 export default Board;
