@@ -1,5 +1,4 @@
 import React from 'react';
-import Row from './Row';
 import Square from './Square'
 
 class Board extends React.Component {
@@ -12,8 +11,12 @@ class Board extends React.Component {
   }
   render() {
     const chessBoard = this.state.squaresArray.map((element, index) => {
-      let colNumber = index + 1;      //need to fix this still.
-      let rowNumber = Math.ceil(colNumber/8);
+      let squareNumber = index + 1;
+      let rowNumber = Math.ceil(squareNumber/8);
+      let colNumber = squareNumber % 8;
+      if (!colNumber){
+        colNumber = 8;
+      }
       const keyName = rowNumber.toString() + '-' + colNumber.toString()
       let color;
       if(rowNumber % 2){
